@@ -8,13 +8,15 @@
 
 #import "ViewController.h"
 
-#import "PushAppsCounter.h"
 
 @interface ViewController ()
+
 
 @end
 
 @implementation ViewController
+
+UInt32 count = 0;
 
 - (void)viewDidLoad
 {
@@ -29,20 +31,25 @@
 
 
 - (IBAction)pushButton:(id)sender{
-    PushAppsCounter *counter = [[PushAppsCounter alloc]init];
-    [counter addCounter];
-    NSLog(@"Current Count: %i", (unsigned int)counter.currentCount);
+//    PushAppsCounter *counter = [[PushAppsCounter alloc]init];
+//    [counter addCounter];
+//    NSLog(@"Current Count: %i", (unsigned int)counter.currentCount);
+    count ++;
+    NSLog(@"count: %i", (unsigned int)count);
+    NSString *string = [NSString stringWithFormat:@"%d", (unsigned int)count];
+    self.currentCountLabel.text = string;
+}
+
+//
+- (IBAction)resetButton:(id)sender {
+    count = 0;
+    NSString *string = [NSString stringWithFormat:@"%d", (unsigned int)count];
+    self.currentCountLabel.text = string;
+    
+//    PushAppsCounter *counter = [[PushAppsCounter alloc]init];
+//    [counter setHistoryCount];
+//    NSString* currentCountString = [NSString stringWithFormat:@"%i", (unsigned int)counter.currentCount];
 //    self.currentCountLabel.text = currentCountString;
 }
-
-
-- (IBAction)resetButton:(id)sender {
-    PushAppsCounter *counter = [[PushAppsCounter alloc]init];
-    [counter setHistoryCount];
-    counter.currentCount = 0;
-    NSString* currentCountString = [NSString stringWithFormat:@"%i", (unsigned int)counter.currentCount];
-    self.currentCountLabel.text = currentCountString;
     
-
-}
 @end

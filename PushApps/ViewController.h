@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "PushAppsCounter.h"
 
 @interface ViewController : UIViewController
 
