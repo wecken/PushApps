@@ -19,6 +19,7 @@
 		C183AEED170659040014A880 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C183AEEB170659040014A880 /* MainStoryboard.storyboard */; };
 		C183AEF0170659040014A880 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C183AEEF170659040014A880 /* ViewController.m */; };
 		C1878CDF1755B9BF00A03642 /* PushAppsCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = C1878CDE1755B9BF00A03642 /* PushAppsCounter.m */; };
+		C1E4A3ED1881792D002861A4 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E4A3EC1881792D002861A4 /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		C183AEEF170659040014A880 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C1878CDD1755B9BF00A03642 /* PushAppsCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushAppsCounter.h; sourceTree = "<group>"; };
 		C1878CDE1755B9BF00A03642 /* PushAppsCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushAppsCounter.m; sourceTree = "<group>"; };
+		C1E4A3EB1881792D002861A4 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		C1E4A3EC1881792D002861A4 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				C183AEEF170659040014A880 /* ViewController.m */,
 				C183AEEB170659040014A880 /* MainStoryboard.storyboard */,
 				C183AEDA170659040014A880 /* Supporting Files */,
+				C1E4A3EB1881792D002861A4 /* SecondViewController.h */,
+				C1E4A3EC1881792D002861A4 /* SecondViewController.m */,
 			);
 			path = PushApps;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1E4A3ED1881792D002861A4 /* SecondViewController.m in Sources */,
 				C183AEE0170659040014A880 /* main.m in Sources */,
 				C183AEE4170659040014A880 /* AppDelegate.m in Sources */,
 				C183AEF0170659040014A880 /* ViewController.m in Sources */,

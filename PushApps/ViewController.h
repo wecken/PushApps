@@ -14,6 +14,9 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *currentCountLabel;
 
+
+- (IBAction)transition:(id)sender;
+
 - (IBAction)pushButton:(id)sender;
 
 - (IBAction)resetButton:(id)sender;

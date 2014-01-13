@@ -17,6 +17,9 @@
 @implementation ViewController
 
 UInt32 count = 0;
+- (IBAction)transition:(id)sender {
+    
+}
 
 - (void)viewDidLoad
 {
