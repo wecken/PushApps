@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+#define MAXHISTORY 20;
 
 @interface ViewController : UIViewController
 

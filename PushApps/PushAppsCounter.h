@@ -10,9 +10,7 @@
 #define MAXHISTORY  20
 
 @interface PushAppsCounter : NSObject
-{
-    UInt32  historyCount[MAXHISTORY];
-}
+
 @property (assign, nonatomic) UInt32 currentCount;
 
 - (void)addCounter;

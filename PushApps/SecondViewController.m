@@ -14,6 +14,8 @@
 
 @implementation SecondViewController
 
+NSMutableArray *items;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -25,11 +27,24 @@
 
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
+    items = [[NSMutableArray alloc] init];
+    [items addObject:@"hoge"];
+    [items addObject:@"fuga"];
+    [items addObject:@"piyo"];
 	// Do any additional setup after loading the view.
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [items count];
+}
 
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    cell.textLabel.text = [items objectAtIndex:indexPath.row];
+    return cell;
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -40,5 +55,7 @@
 - (IBAction)dismissModal:(id)sender{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
 
 @end

@@ -18,7 +18,6 @@
 		C183AEEA170659040014A880 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C183AEE9170659040014A880 /* Default-568h@2x.png */; };
 		C183AEED170659040014A880 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C183AEEB170659040014A880 /* MainStoryboard.storyboard */; };
 		C183AEF0170659040014A880 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C183AEEF170659040014A880 /* ViewController.m */; };
-		C1878CDF1755B9BF00A03642 /* PushAppsCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = C1878CDE1755B9BF00A03642 /* PushAppsCounter.m */; };
 		C1E4A3ED1881792D002861A4 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E4A3EC1881792D002861A4 /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -39,8 +38,6 @@
 		C183AEEC170659040014A880 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C183AEEE170659040014A880 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C183AEEF170659040014A880 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		C1878CDD1755B9BF00A03642 /* PushAppsCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushAppsCounter.h; sourceTree = "<group>"; };
-		C1878CDE1755B9BF00A03642 /* PushAppsCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushAppsCounter.m; sourceTree = "<group>"; };
 		C1E4A3EB1881792D002861A4 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		C1E4A3EC1881792D002861A4 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,8 +88,6 @@
 			children = (
 				C183AEE2170659040014A880 /* AppDelegate.h */,
 				C183AEE3170659040014A880 /* AppDelegate.m */,
-				C1878CDD1755B9BF00A03642 /* PushAppsCounter.h */,
-				C1878CDE1755B9BF00A03642 /* PushAppsCounter.m */,
 				C183AEEE170659040014A880 /* ViewController.h */,
 				C183AEEF170659040014A880 /* ViewController.m */,
 				C183AEEB170659040014A880 /* MainStoryboard.storyboard */,
@@ -187,7 +182,6 @@
 				C183AEE0170659040014A880 /* main.m in Sources */,
 				C183AEE4170659040014A880 /* AppDelegate.m in Sources */,
 				C183AEF0170659040014A880 /* ViewController.m in Sources */,
-				C1878CDF1755B9BF00A03642 /* PushAppsCounter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

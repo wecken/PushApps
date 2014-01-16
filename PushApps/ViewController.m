@@ -7,22 +7,27 @@
 //
 
 #import "ViewController.h"
+#define MAXHISTORY 20;
 
-
-@interface ViewController ()
-
+@interface ViewController()
 
 @end
 
 @implementation ViewController
 
 UInt32 count = 0;
+
+
+
 - (IBAction)transition:(id)sender {
     
 }
 
+
+
 - (void)viewDidLoad
 {
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -36,14 +41,13 @@ UInt32 count = 0;
 - (IBAction)pushButton:(id)sender{
 //    PushAppsCounter *counter = [[PushAppsCounter alloc]init];
 //    [counter addCounter];
-//    NSLog(@"Current Count: %i", (unsigned int)counter.currentCount);
+//    NSLog(@"count: %i", (unsigned int)count);
+
     count ++;
-    NSLog(@"count: %i", (unsigned int)count);
     NSString *string = [NSString stringWithFormat:@"%d", (unsigned int)count];
     self.currentCountLabel.text = string;
 }
 
-//
 - (IBAction)resetButton:(id)sender {
     count = 0;
     NSString *string = [NSString stringWithFormat:@"%d", (unsigned int)count];

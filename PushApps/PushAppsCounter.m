@@ -15,10 +15,7 @@
 - (id)init
 {
     self = [super init];
-    for (UInt32 i = 0; i > MAXHISTORY; i++) {
-        historyCount[i] = 0;
-    }
-    NSLog(@"Current Count: %i", (unsigned int)self.currentCount);
+//    NSLog(@"Current Count: %i", (unsigned int)self.currentCount);
     return self;
 }
 
@@ -27,7 +24,7 @@
     self.currentCount ++;
 }
 
-
+    
 - (void)setHistoryCount
 {
     historyCount[0] = self.currentCount;
