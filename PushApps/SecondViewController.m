@@ -41,6 +41,7 @@ NSMutableArray *items;
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    tableView.userInteractionEnabled = NO;
     UITableViewCell *cell = [[UITableViewCell alloc] init];
     cell.textLabel.text = [items objectAtIndex:indexPath.row];
     return cell;
