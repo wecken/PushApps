@@ -49,28 +49,30 @@ UInt32 count = 0;
 }
 
 - (IBAction)resetButton:(id)sender {
-    count = 0;
     NSString *string = [NSString stringWithFormat:@"%d", (unsigned int)count];
     self.currentCountLabel.text = string;
-
-        NSDate *date = [NSDate date];
-        NSLog(@"現在の日時 > %@",date);
-        NSCalendar *calendar = [NSCalendar currentCalendar];
-        NSDateComponents *dateComps = [calendar components:
-                                       NSYearCalendarUnit   |
-                                       NSMonthCalendarUnit  |
-                                       NSDayCalendarUnit    |
-                                       NSHourCalendarUnit   |
-                                       NSMinuteCalendarUnit |
-                                       NSSecondCalendarUnit
+    
+    NSDate *date = [NSDate date];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *dateComps = [calendar components:
+                                   NSYearCalendarUnit   |
+                                   NSMonthCalendarUnit  |
+                                   NSDayCalendarUnit    |
+                                   NSHourCalendarUnit   |
+                                   NSMinuteCalendarUnit |
+                                   NSSecondCalendarUnit
                                               fromDate:date];
-    NSLog(@"現在は %d年 %02d月 %02d日 %02d時 %02d分 %02d秒",
-          dateComps.year,
-          dateComps.month,
-          dateComps.day,
-          dateComps.hour,
-          dateComps.minute,
-          dateComps.second);
+
+    if(count != 0){
+        NSLog(@"現在は %d年 %02d月 %02d日 %02d時 %02d分 %02d秒",
+              dateComps.year,
+              dateComps.month,
+              dateComps.day,
+              dateComps.hour,
+              dateComps.minute,
+              dateComps.second);}
+    
+    count = 0;
     
 //    PushAppsCounter *counter = [[PushAppsCounter alloc]init];
 //    [counter setHistoryCount];
