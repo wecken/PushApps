@@ -30,9 +30,9 @@ NSMutableArray *items;
     
     [super viewDidLoad];
     items = [[NSMutableArray alloc] init];
-    [items addObject:@"hoge"];
-    [items addObject:@"fuga"];
-    [items addObject:@"piyo"];
+    [items addObject:@"ときさば NAOKI 北村"];
+    [items addObject:@"さちん大森"];
+    [items addObject:@"うくそ三浦"];
 	// Do any additional setup after loading the view.
 }
 
