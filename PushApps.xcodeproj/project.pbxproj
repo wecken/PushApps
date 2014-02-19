@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C108049818B07B8900515890 /* pushAppIcon120.png in Resources */ = {isa = PBXBuildFile; fileRef = C108049618B07B8900515890 /* pushAppIcon120.png */; };
+		C108049918B07B8900515890 /* pushAppIcon80.png in Resources */ = {isa = PBXBuildFile; fileRef = C108049718B07B8900515890 /* pushAppIcon80.png */; };
+		C1735A8C18B4AB6200555F27 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = C1735A8B18B4AB6200555F27 /* button.png */; };
 		C183AED4170659040014A880 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C183AED3170659040014A880 /* UIKit.framework */; };
 		C183AED6170659040014A880 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C183AED5170659040014A880 /* Foundation.framework */; };
 		C183AED8170659040014A880 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C183AED7170659040014A880 /* CoreGraphics.framework */; };
@@ -22,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C108049518B07B7100515890 /* pushAppIcon58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pushAppIcon58.png; path = ../pushAppIcon58.png; sourceTree = "<group>"; };
+		C108049618B07B8900515890 /* pushAppIcon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pushAppIcon120.png; sourceTree = "<group>"; };
+		C108049718B07B8900515890 /* pushAppIcon80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pushAppIcon80.png; sourceTree = "<group>"; };
+		C1735A8B18B4AB6200555F27 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		C183AED0170659040014A880 /* PushApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C183AED3170659040014A880 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C183AED5170659040014A880 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -101,6 +108,10 @@
 		C183AEDA170659040014A880 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C108049618B07B8900515890 /* pushAppIcon120.png */,
+				C108049718B07B8900515890 /* pushAppIcon80.png */,
+				C108049518B07B7100515890 /* pushAppIcon58.png */,
+				C1735A8B18B4AB6200555F27 /* button.png */,
 				C183AEDB170659040014A880 /* PushApps-Info.plist */,
 				C183AEDC170659040014A880 /* InfoPlist.strings */,
 				C183AEDF170659040014A880 /* main.m */,
@@ -140,6 +151,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "三浦博行";
+				TargetAttributes = {
+					C183AECF170659040014A880 = {
+						DevelopmentTeam = 9M89A9F2SZ;
+					};
+				};
 			};
 			buildConfigurationList = C183AECB170659040014A880 /* Build configuration list for PBXProject "PushApps" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -163,6 +179,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1735A8C18B4AB6200555F27 /* button.png in Resources */,
+				C108049918B07B8900515890 /* pushAppIcon80.png in Resources */,
+				C108049818B07B8900515890 /* pushAppIcon120.png in Resources */,
 				C183AEDE170659040014A880 /* InfoPlist.strings in Resources */,
 				C183AEE6170659040014A880 /* Default.png in Resources */,
 				C183AEE8170659040014A880 /* Default@2x.png in Resources */,
@@ -219,7 +238,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hiroyuki Miura (8G54DN2SXF)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -234,6 +253,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "38528627-FDAF-4964-863F-61C15C292B33";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -250,7 +270,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hiroyuki Miura (8G54DN2SXF)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -258,6 +278,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "38528627-FDAF-4964-863F-61C15C292B33";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -266,12 +287,15 @@
 		C183AEF4170659040014A880 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PushApps/PushApps-Prefix.pch";
 				INFOPLIST_FILE = "PushApps/PushApps-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 armv7s armv6";
 				WRAPPER_EXTENSION = app;
 			};
@@ -280,12 +304,15 @@
 		C183AEF5170659040014A880 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PushApps/PushApps-Prefix.pch";
 				INFOPLIST_FILE = "PushApps/PushApps-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 armv7s armv6";
 				WRAPPER_EXTENSION = app;
 			};

@@ -49,8 +49,6 @@ UInt32 count = 0;
 }
 
 - (IBAction)resetButton:(id)sender {
-    NSString *string = [NSString stringWithFormat:@"%d", (unsigned int)count];
-    self.currentCountLabel.text = string;
     
     NSDate *date = [NSDate date];
     NSCalendar *calendar = [NSCalendar currentCalendar];
@@ -70,9 +68,11 @@ UInt32 count = 0;
               dateComps.day,
               dateComps.hour,
               dateComps.minute,
-              dateComps.second);}
-    
-    count = 0;
+              dateComps.second);
+        count = 0;
+        NSString *string = [NSString stringWithFormat:@"%d", (unsigned int)count];
+        self.currentCountLabel.text = string;
+    }
     
 //    PushAppsCounter *counter = [[PushAppsCounter alloc]init];
 //    [counter setHistoryCount];

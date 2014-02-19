@@ -7,6 +7,10 @@
 //
 
 #import "SecondViewController.h"
+#define dummyData1 "11回 2014/02/19 18:19"
+#define dummyData2 "30回 2014/02/17 21:32"
+#define dummyData3 "20回 2014/02/16 15:20"
+
 
 @interface SecondViewController ()
 
@@ -30,9 +34,9 @@ NSMutableArray *items;
     
     [super viewDidLoad];
     items = [[NSMutableArray alloc] init];
-    [items addObject:@"ときさば NAOKI 北村"];
-    [items addObject:@"さちん大森"];
-    [items addObject:@"うくそ三浦"];
+    [items addObject:@dummyData1];
+    [items addObject:@dummyData2];
+    [items addObject:@dummyData3];
 	// Do any additional setup after loading the view.
 }
 
@@ -45,6 +49,7 @@ NSMutableArray *items;
     UITableViewCell *cell = [[UITableViewCell alloc] init];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.textLabel.text = [items objectAtIndex:indexPath.row];
+    cell.textLabel.font = [UIFont fontWithName:@"HiraKakuProN-W3" size:18.0f];
     return cell;
 }
 

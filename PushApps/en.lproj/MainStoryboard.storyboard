@@ -14,20 +14,11 @@
                         <viewControllerLayoutGuide type="bottom" id="IsG-BZ-3yX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3" customClass="ViwController">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aaj-rD-vIb">
-                                <rect key="frame" x="139" y="20" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="kZL-68-BlY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvp-yP-h3G">
-                                <rect key="frame" x="0.0" y="430" width="73" height="30"/>
+                                <rect key="frame" x="0.0" y="518" width="73" height="30"/>
                                 <state key="normal" title="Reset">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -36,17 +27,18 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7W-pK-7gg">
-                                <rect key="frame" x="141" y="225" width="39" height="30"/>
+                                <rect key="frame" x="20" y="144" width="280" height="280"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Press">
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="0.5"/>
+                                <state key="normal" backgroundImage="button.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pushButton:" destination="2" eventType="touchUpInside" id="Vlr-oj-i6R"/>
+                                    <action selector="pushButton:" destination="2" eventType="touchDown" id="ch0-B6-UJB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flh-57-D81">
-                                <rect key="frame" x="223" y="430" width="77" height="30"/>
+                                <rect key="frame" x="223" y="518" width="77" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="See history">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -56,18 +48,28 @@
                                     <segue destination="9VV-wo-AW4" kind="modal" id="2kE-Vg-9mL"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aaj-rD-vIb">
+                                <rect key="frame" x="85" y="205" width="151" height="158"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="73"/>
+                                <color key="textColor" red="0.0" green="0.53333336109999996" blue="0.78039222959999999" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Aaj-rD-vIb" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" id="9ef-mZ-4p3"/>
-                            <constraint firstAttribute="centerX" secondItem="Aaj-rD-vIb" secondAttribute="centerX" id="9pv-ce-Egv"/>
-                            <constraint firstAttribute="centerX" secondItem="h7W-pK-7gg" secondAttribute="centerX" id="DTd-lF-tHE"/>
+                            <constraint firstItem="Aaj-rD-vIb" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="85" id="7yu-Cx-vuC"/>
+                            <constraint firstItem="h7W-pK-7gg" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="DWO-Sb-yLd"/>
                             <constraint firstItem="IsG-BZ-3yX" firstAttribute="top" secondItem="flh-57-D81" secondAttribute="bottom" constant="20" id="ERi-Oz-gzd"/>
                             <constraint firstAttribute="trailing" secondItem="nvp-yP-h3G" secondAttribute="trailing" constant="247" id="FfK-MV-1eb"/>
-                            <constraint firstAttribute="centerY" secondItem="h7W-pK-7gg" secondAttribute="centerY" id="S3K-y0-44z"/>
+                            <constraint firstItem="h7W-pK-7gg" firstAttribute="centerX" secondItem="Aaj-rD-vIb" secondAttribute="centerX" id="HTX-sg-6IB"/>
+                            <constraint firstItem="h7W-pK-7gg" firstAttribute="trailing" secondItem="flh-57-D81" secondAttribute="trailing" id="QyJ-xM-Xvq"/>
+                            <constraint firstItem="h7W-pK-7gg" firstAttribute="centerY" secondItem="Aaj-rD-vIb" secondAttribute="centerY" id="glN-HG-pao"/>
+                            <constraint firstItem="Aaj-rD-vIb" firstAttribute="top" secondItem="rv4-3c-jZ0" secondAttribute="bottom" constant="185" id="i39-GA-zZq"/>
                             <constraint firstItem="IsG-BZ-3yX" firstAttribute="top" secondItem="nvp-yP-h3G" secondAttribute="bottom" constant="20" id="ij2-9d-u3k"/>
                             <constraint firstItem="nvp-yP-h3G" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="khO-TF-mQP"/>
+                            <constraint firstItem="h7W-pK-7gg" firstAttribute="centerY" secondItem="3" secondAttribute="centerY" id="l0F-p8-SBj"/>
                             <constraint firstAttribute="trailing" secondItem="flh-57-D81" secondAttribute="trailing" constant="20" id="x4A-pD-gzr"/>
+                            <constraint firstItem="h7W-pK-7gg" firstAttribute="top" secondItem="rv4-3c-jZ0" secondAttribute="bottom" constant="124" id="yUu-TD-Qdt"/>
                         </constraints>
                     </view>
                     <connections>
@@ -87,7 +89,7 @@
                         <viewControllerLayoutGuide type="bottom" id="A2g-QL-kR4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Bso-80-JPe">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMs-zt-Lha">
@@ -101,7 +103,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xkg-eD-9sh">
-                                <rect key="frame" x="0.0" y="82" width="320" height="398"/>
+                                <rect key="frame" x="0.0" y="82" width="320" height="486"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -149,9 +151,12 @@
             <point key="canvasLocation" x="-652" y="111"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button.png" width="602" height="602"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
 </document>
