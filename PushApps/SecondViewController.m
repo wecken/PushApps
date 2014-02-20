@@ -8,6 +8,7 @@
 
 #import "SecondViewController.h"
 
+#define MAX_ITEMS 9
 
 @interface SecondViewController ()
 
@@ -32,16 +33,21 @@ NSMutableArray *items;
     [super viewDidLoad];
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];  // 取得
     
-    int month = [ud integerForKey:@"KEY_MONTH"];
-    int day = [ud integerForKey:@"KEY_DAY"];
-    int hour = [ud integerForKey:@"KEY_HOUR"];
-    int minute = [ud integerForKey:@"KEY_MINUTE"];
-    int count = [ud integerForKey:@"KEY_COUNT"];
+//    int month = [ud integerForKey:@"KEY_MONTH"];
+//    int day = [ud integerForKey:@"KEY_DAY"];
+//    int hour = [ud integerForKey:@"KEY_HOUR"];
+//    int minute = [ud integerForKey:@"KEY_MINUTE"];
+//    int count = [ud integerForKey:@"KEY_COUNT"];
     
-    NSString *string;
-    string = [NSString stringWithFormat:@"%d回 %d月%d日 %02d:%02d", (unsigned int)count, (unsigned int)month, (unsigned int)day, (unsigned int)hour, (unsigned int)minute];
+    NSMutableArray *myArray = [ud objectForKey:@"KEY_ARRAY"];  // KEY_Sの内容をNSString型として取得
+    
     items = [[NSMutableArray alloc] init];
-    [items addObject:string];
+    
+    //取り出したmyArrayをitemsに挿入していく。
+    NSInteger size = [myArray count];
+    for (int i = 0; i < size; i++) {
+        [items addObject:myArray[i]];
+    }
 	// Do any additional setup after loading the view.
 }
 

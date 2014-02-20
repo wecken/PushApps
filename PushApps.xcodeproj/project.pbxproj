@@ -97,10 +97,10 @@
 				C183AEE3170659040014A880 /* AppDelegate.m */,
 				C183AEEE170659040014A880 /* ViewController.h */,
 				C183AEEF170659040014A880 /* ViewController.m */,
-				C183AEEB170659040014A880 /* MainStoryboard.storyboard */,
-				C183AEDA170659040014A880 /* Supporting Files */,
 				C1E4A3EB1881792D002861A4 /* SecondViewController.h */,
 				C1E4A3EC1881792D002861A4 /* SecondViewController.m */,
+				C183AEEB170659040014A880 /* MainStoryboard.storyboard */,
+				C183AEDA170659040014A880 /* Supporting Files */,
 			);
 			path = PushApps;
 			sourceTree = "<group>";

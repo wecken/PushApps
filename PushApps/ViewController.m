@@ -83,7 +83,6 @@ NSString *string[MAX_LIST]; //string型のarray, string[i] をリストに表示
         //空のリストを生成する
         NSMutableArray *myArray = [NSMutableArray array];
         
-        
         string[MAX_LIST-1] = NULL; //最後のリストを消去
         for (int i = 0; i < MAX_LIST; i++) {
             string[(MAX_LIST-1) -i] = string[(MAX_LIST-2) -i]; //
@@ -92,15 +91,17 @@ NSString *string[MAX_LIST]; //string型のarray, string[i] をリストに表示
         string[0] = [NSString stringWithFormat:@"%d回 %d月%d日 %02d:%02d", (unsigned int)count, (unsigned int)dateComps.month, (unsigned int)dateComps.day, (unsigned int)dateComps.hour, (unsigned int)dateComps.minute]; //最初のstringに最新の回数データを格納。
 
         
-//        NSLog(@"%@ / %@ / %@ / %@ / %@ / %@ / %@ / %@ / %@ / %@",string[0],string[1],string[2],string[3],string[4],string[5],string[6],string[7],string[8],string[9]);
+        NSLog(@"%@ / %@ / %@ / %@ / %@ / %@ / %@ / %@ / %@ / %@",string[0],string[1],string[2],string[3],string[4],string[5],string[6],string[7],string[8],string[9]);
         
         
-        //MAX_ITEM回分のstring[]をmyArrayの中に格納。
+        //MAX_ITEM回分のstring[]をmyArrayの中に格納。nilデータを格納しようとすると落ちるので、if notで排除。
         for (int i = 0; i < MAX_LIST; i++) {
+            if(string[i] != nil){
         [myArray addObject:string[i]];
+            }
         }
     
-        [ud setObject:myArray forKey:@"KEY_ARRAY"];  // object myArrayをKEY_ARRAYというキーで保存。取り出しはSecondViewControllerの中で行う。
+       [ud setObject:myArray forKey:@"KEY_ARRAY"];  // object myArrayをKEY_ARRAYというキーで保存。取り出しはSecondViewControllerの中で行う。
         count = 0;
         currentCount = [NSString stringWithFormat:@"%d", (unsigned int)count];
         self.currentCountLabel.text = currentCount;
