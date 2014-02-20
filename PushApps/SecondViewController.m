@@ -7,9 +7,6 @@
 //
 
 #import "SecondViewController.h"
-#define dummyData1 "11回 2014/02/19 18:19"
-#define dummyData2 "30回 2014/02/17 21:32"
-#define dummyData3 "20回 2014/02/16 15:20"
 
 
 @interface SecondViewController ()
@@ -33,10 +30,18 @@ NSMutableArray *items;
 {
     
     [super viewDidLoad];
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];  // 取得
+    
+    int month = [ud integerForKey:@"KEY_MONTH"];
+    int day = [ud integerForKey:@"KEY_DAY"];
+    int hour = [ud integerForKey:@"KEY_HOUR"];
+    int minute = [ud integerForKey:@"KEY_MINUTE"];
+    int count = [ud integerForKey:@"KEY_COUNT"];
+    
+    NSString *string;
+    string = [NSString stringWithFormat:@"%d回 %d月%d日 %02d:%02d", (unsigned int)count, (unsigned int)month, (unsigned int)day, (unsigned int)hour, (unsigned int)minute];
     items = [[NSMutableArray alloc] init];
-    [items addObject:@dummyData1];
-    [items addObject:@dummyData2];
-    [items addObject:@dummyData3];
+    [items addObject:string];
 	// Do any additional setup after loading the view.
 }
 

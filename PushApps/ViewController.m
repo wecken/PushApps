@@ -69,6 +69,16 @@ UInt32 count = 0;
               dateComps.hour,
               dateComps.minute,
               dateComps.second);
+        
+        //NSUSerDefaults 値を端末に保存しておいて、変更したり取り出したりできる
+        NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];  // 取得
+        [ud setInteger:dateComps.month forKey:@"KEY_MONTH"];  // int型のdateComps.monthをKEY_MONTHというキーで保存
+        [ud setInteger:dateComps.day forKey:@"KEY_DAY"];
+        [ud setInteger:dateComps.hour forKey:@"KEY_HOUR"];
+        [ud setInteger:dateComps.minute forKey:@"KEY_MINUTE"];
+        [ud setInteger:count forKey:@"KEY_COUNT"];
+        [ud synchronize];  // NSUserDefaultsに即時反映させる（即時で無くてもよい場合は不要）
+        
         count = 0;
         NSString *string = [NSString stringWithFormat:@"%d", (unsigned int)count];
         self.currentCountLabel.text = string;
@@ -79,5 +89,12 @@ UInt32 count = 0;
 //    NSString* currentCountString = [NSString stringWithFormat:@"%i", (unsigned int)counter.currentCount];
 //    self.currentCountLabel.text = currentCountString;
 }
+//
+//- (NSString *)dateTimeSender:(int)date :(int)hour :(int)minute{
+//    date = self.dateComps.day;
+//    NSString *dateTime = [NSString stringWithFormat:@"%d %d:%d", (unsigned int)date,(unsigned int)hour, (unsigned int)minute];
+//    return dateTime;
+//}
+
     
 @end
