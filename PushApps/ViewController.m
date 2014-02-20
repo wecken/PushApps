@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#define MAXHISTORY 20;
+#define MAX_LIST 10
 
 @interface ViewController()
 
@@ -16,8 +16,7 @@
 @implementation ViewController
 
 UInt32 count = 0;
-
-
+NSString *string[MAX_LIST]; //string型のarray, string[i] をリストに表示させる最大数（MAX_LIST）分作成
 
 - (IBAction)transition:(id)sender {
     
@@ -44,8 +43,8 @@ UInt32 count = 0;
 //    NSLog(@"count: %i", (unsigned int)count);
 
     count ++;
-    NSString *string = [NSString stringWithFormat:@"%d", (unsigned int)count];
-    self.currentCountLabel.text = string;
+    NSString *currentCount = [NSString stringWithFormat:@"%d", (unsigned int)count];
+    self.currentCountLabel.text = currentCount;
 }
 
 - (IBAction)resetButton:(id)sender {
@@ -62,13 +61,13 @@ UInt32 count = 0;
                                               fromDate:date];
 
     if(count != 0){
-        NSLog(@"現在は %d年 %02d月 %02d日 %02d時 %02d分 %02d秒",
-              dateComps.year,
-              dateComps.month,
-              dateComps.day,
-              dateComps.hour,
-              dateComps.minute,
-              dateComps.second);
+//        NSLog(@"現在は %d年 %02d月 %02d日 %02d時 %02d分 %02d秒",
+//              dateComps.year,
+//              dateComps.month,
+//              dateComps.day,
+//              dateComps.hour,
+//              dateComps.minute,
+//              dateComps.second);
         
         //NSUSerDefaults 値を端末に保存しておいて、変更したり取り出したりできる
         NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];  // 取得
@@ -78,10 +77,33 @@ UInt32 count = 0;
         [ud setInteger:dateComps.minute forKey:@"KEY_MINUTE"];
         [ud setInteger:count forKey:@"KEY_COUNT"];
         [ud synchronize];  // NSUserDefaultsに即時反映させる（即時で無くてもよい場合は不要）
+        NSString *currentCount;
         
+        
+        //空のリストを生成する
+        NSMutableArray *myArray = [NSMutableArray array];
+        
+        
+        string[MAX_LIST-1] = NULL; //最後のリストを消去
+        for (int i = 0; i < MAX_LIST; i++) {
+            string[(MAX_LIST-1) -i] = string[(MAX_LIST-2) -i]; //
+        }
+        
+        string[0] = [NSString stringWithFormat:@"%d回 %d月%d日 %02d:%02d", (unsigned int)count, (unsigned int)dateComps.month, (unsigned int)dateComps.day, (unsigned int)dateComps.hour, (unsigned int)dateComps.minute]; //最初のstringに最新の回数データを格納。
+
+        
+//        NSLog(@"%@ / %@ / %@ / %@ / %@ / %@ / %@ / %@ / %@ / %@",string[0],string[1],string[2],string[3],string[4],string[5],string[6],string[7],string[8],string[9]);
+        
+        
+        //MAX_ITEM回分のstring[]をmyArrayの中に格納。
+        for (int i = 0; i < MAX_LIST; i++) {
+        [myArray addObject:string[i]];
+        }
+    
+        [ud setObject:myArray forKey:@"KEY_ARRAY"];  // object myArrayをKEY_ARRAYというキーで保存。取り出しはSecondViewControllerの中で行う。
         count = 0;
-        NSString *string = [NSString stringWithFormat:@"%d", (unsigned int)count];
-        self.currentCountLabel.text = string;
+        currentCount = [NSString stringWithFormat:@"%d", (unsigned int)count];
+        self.currentCountLabel.text = currentCount;
     }
     
 //    PushAppsCounter *counter = [[PushAppsCounter alloc]init];
